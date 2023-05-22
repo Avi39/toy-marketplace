@@ -1,11 +1,29 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import pic from '../../assets/signup.jpg'
+import { AuthContext } from '../../Providers/AuthProviders';
+
 
 const SignUp = () => {
+    const {createUser} = useContext(AuthContext);
+    const navigate = useNavigate();
     const handleSignUp = event =>{
         event.preventDefault();
+        const form = event.target;
+        const name = form.name.value;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(name,email,password);
+
+        createUser(email,password)
+        .then(result=>{
+            const user = result.user;
+            console.log(user);
+            navigate('/login');
+        })
+        .catch(error => console.log(error))
+
     }
     return (
         <div className="hero min-h-screen ">
@@ -39,7 +57,7 @@ const SignUp = () => {
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                                <input className="btn btn-primary" type="submit" value="Login" />
+                                <input className="btn btn-primary" type="submit" value="SignUp" />
                             </div>
                         </form>
                         <br />

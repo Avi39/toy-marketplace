@@ -1,12 +1,47 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useContext } from 'react';
 import pic from '../../assets/login.jpg'
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../Providers/AuthProviders';
+import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
+import app from '../../firebse/firebase.config';
+import { FaBeer,FaGoogle } from 'react-icons/fa';
 
 const Login = () => {
+    const auth = getAuth(app)
+    const provider = new GoogleAuthProvider();
+    const {signIn} = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
+    console.log('login page location',location);
     const handleLogin = event =>{
         event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(email,password);
+        signIn(email,password)
+        .then(result =>{
+            const user = result.user;
+            console.log(user);
+            navigate(from,{replace: true});
+        })
+        .catch(error =>{ console.log(error);
+        })
     }
+        const handleGoogleSignIn = () =>{
+            signInWithPopup(auth,provider)
+            .then(result =>{
+                const user = result.user;
+                console.log(user);
+                 navigate(from,{replace: true});
+            })
+            .catch(error =>{
+                console.log(error);
+            })
+        }
+    
     return (
         <div className="hero min-h-screen ">
             <div className="hero-content flex-col lg:flex-row">
@@ -37,6 +72,7 @@ const Login = () => {
                             </div>
                         </form>
                         <br />
+                        <button className='border' onClick={handleGoogleSignIn}><FaGoogle className=''></FaGoogle> Login with google</button>
                         <p>New to AnimalToys StoCK? <Link className='font-bold underline text-red-500 ml-1'to="/signup">SignUp Please</Link></p>
                     </div>
                 </div>
