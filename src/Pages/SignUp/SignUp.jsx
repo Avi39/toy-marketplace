@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import pic from '../../assets/login.jpg'
 import { Link } from 'react-router-dom';
+import pic from '../../assets/signup.jpg'
 
-const Login = () => {
-    const handleLogin = event =>{
+const SignUp = () => {
+    const handleSignUp = event =>{
         event.preventDefault();
     }
     return (
@@ -15,8 +15,14 @@ const Login = () => {
                 </div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <div className="card-body">
-                        <h1 className="text-3xl font-bold text-center">Login Please</h1>
-                        <form onSubmit={handleLogin}>
+                        <h1 className="text-3xl font-bold text-center">SignUp Please</h1>
+                        <form onSubmit={handleSignUp}>
+                        <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Name</span>
+                                </label>
+                                <input type="text" name='name' placeholder="Your name" className="input input-bordered" />
+                            </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
@@ -37,7 +43,7 @@ const Login = () => {
                             </div>
                         </form>
                         <br />
-                        <p>New to AnimalToys StoCK? <Link className='font-bold underline text-red-500 ml-1'to="/signup">SignUp Please</Link></p>
+                        <p>Already have an account? <Link className='font-bold underline text-red-500 ml-1'to="/login">Login Please</Link></p>
                     </div>
                 </div>
             </div>
@@ -45,4 +51,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default SignUp;
