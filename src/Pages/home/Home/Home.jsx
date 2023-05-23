@@ -2,12 +2,16 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
 import ShopCategory from '../Shop-by-category/ShopCategory';
+import SpecialToys from '../specialToys/SpecialToys';
+import Kids from '../kids/Kids';
 
 const Home = () => {
     return (
         <div>
            <Banner></Banner>
            <ShopCategory></ShopCategory>
+           <SpecialToys></SpecialToys>
+           <Kids></Kids>
         </div>
     );
 };

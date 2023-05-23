@@ -1,0 +1,25 @@
+[
+      {
+        "id":1,
+        "name": "Roaring Rex",
+        "price": "$19.99",
+        "details": "Roaring Rex is a ferocious dinosaur toy with realistic sound effects. It features textured skin, movable limbs, and glowing red eyes. Battery-powered.",
+        "image": "https://i5.walmartimages.com/asr/847a91dd-8df3-4fae-a2a5-1b266bdfd870.c0bc20b87ca2e6ad8246979ab17342dd.jpeg"
+      },
+      {
+        "id":2,
+        "name": "Fluttering Flamingo",
+        "price": "$12.99",
+        "details": "Fluttering Flamingo is a beautiful bird toy that flaps its wings when activated. It has vibrant pink feathers, a long neck, and a stable base. Battery-operated.",
+        "image": "https://creativecraftingworld.co.uk/wp-content/uploads/Flamingo-1200x1200-1.jpg"
+      },
+      {
+        "id":3,
+        "name": "Cuddly Koala",
+        "price": "$9.99",
+        "details": "Cuddly Koala is an adorable plush toy that is incredibly soft and huggable. It has a velvety coat, a cute button nose, and a small pouch on its belly. No batteries required.",
+        "image": "https://board.colomio.com/wp-content/plugins/aawp/public/image.php?url=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvNDFXbXpaT1RDOUwuanBn"
+      }
+    ]
+  
+  

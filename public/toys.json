@@ -1,0 +1,59 @@
+[
+    
+      {
+        "_id":1,
+        "Picture": "https://example.com/toy1.jpg",
+        "Name": "Fluffy Teddy Bear",
+        "Price": 1900,
+        "Rating": 4.5,
+        "Available Quantity": 10,
+        "category":"plastic"
+      },
+
+      {
+        "_id":2,
+        "Picture": "https://example.com/toy2.jpg",
+        "Name": "Cuddly Brown Bear",
+        "Price": 2400,
+        "Rating": 4.8,
+        "Available Quantity": 5,
+        "category":"hardware"
+      },
+      {
+        "_id":3,
+        "Picture": "https://example.com/toy1.jpg",
+        "Name": "Gallop and Play Horse",
+        "Price": 2900,
+        "Rating": 4.7,
+        "Available Quantity": 8
+      }
+    ]
+    //   {
+    //     "_id":4,
+    //     "Picture": "https://example.com/toy2.jpg",
+    //     "Name": "Rainbow Unicorn Horse",
+    //     "Price": 3900,
+    //     "Rating": 4.9,
+    //     "Available Quantity": 3
+    //   },
+    //   {
+    //     "_id":5,
+    //     "Picture": "https://example.com/toy2.jpg",
+    //     "Name": "Stegosaurus Adventure",
+    //     "Price": 1900,
+    //     "Rating": 4.4,
+    //     "Available Quantity": 6
+    //   },
+    //   {
+    //     "_id":6,
+    //     "Picture": "https://example.com/toy3.jpg",
+    //     "Name": "Triceratops Explorer",
+    //     "Price": 2950,
+    //     "Rating": 4.8,
+    //     "Available Quantity": 4
+    //   }    
+
+    
+    
+    
+  

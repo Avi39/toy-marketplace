@@ -1,0 +1,21 @@
+[
+    {
+      "id":1,
+      "name": "Animal couple",
+      "price": "$14.99",
+      "image": "https://m.media-amazon.com/images/I/81qn25cndzL._AC_SL1500_.jpg"
+    },
+    {
+      "id":2,
+      "name": "Animal house collection",
+      "price": "$12.99",
+      "image": "https://www.abcschoolsupplies.ie/wp-content/uploads/2019/04/products-jumbo-Farm-Animals-Abc-school-supplies.jpg"
+    },
+    {
+      "id":3,
+      "name": "jungle collection",
+      "price": "$9.99",
+      "image": "https://m.media-amazon.com/images/I/61zM2Urn+FL._AC_.jpg"
+    }
+  ]
+
