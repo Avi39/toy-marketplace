@@ -1,57 +1,62 @@
 [
     
       {
-        "_id":1,
-        "Picture": "https://example.com/toy1.jpg",
+        "toys_id":1,
+        "Picture": "https://static-01.daraz.com.bd/p/2728b73bea0a9bd85446637a916c5641.jpg",
         "Name": "Fluffy Teddy Bear",
         "Price": 1900,
         "Rating": 4.5,
         "Available Quantity": 10,
-        "category":"plastic"
+        "category":"Teddy Bear"
       },
 
       {
-        "_id":2,
-        "Picture": "https://example.com/toy2.jpg",
+        "toys_id":2,
+        "Picture": "https://m.media-amazon.com/images/I/517CqCRjJAL._AC_.jpg",
         "Name": "Cuddly Brown Bear",
         "Price": 2400,
         "Rating": 4.8,
         "Available Quantity": 5,
-        "category":"hardware"
+        "category":"Teddy Bear"
       },
       {
-        "_id":3,
-        "Picture": "https://example.com/toy1.jpg",
+        "toys_id":3,
+        "Picture": "https://m.media-amazon.com/images/I/41FX4hSxAyL._AC_.jpg",
         "Name": "Gallop and Play Horse",
         "Price": 2900,
         "Rating": 4.7,
-        "Available Quantity": 8
-      }
-    ]
-    //   {
-    //     "_id":4,
-    //     "Picture": "https://example.com/toy2.jpg",
-    //     "Name": "Rainbow Unicorn Horse",
-    //     "Price": 3900,
-    //     "Rating": 4.9,
-    //     "Available Quantity": 3
-    //   },
-    //   {
-    //     "_id":5,
-    //     "Picture": "https://example.com/toy2.jpg",
-    //     "Name": "Stegosaurus Adventure",
-    //     "Price": 1900,
-    //     "Rating": 4.4,
-    //     "Available Quantity": 6
-    //   },
-    //   {
-    //     "_id":6,
-    //     "Picture": "https://example.com/toy3.jpg",
-    //     "Name": "Triceratops Explorer",
-    //     "Price": 2950,
-    //     "Rating": 4.8,
-    //     "Available Quantity": 4
-    //   }    
+        "Available Quantity": 8,
+        "category":"Horse"
+      },
+    
+      {
+        "toys_id":4,
+        "Picture": "https://www.collecta.biz/collecta_files/products/88449.jpg",
+        "Name": "Rainbow Unicorn Horse",
+        "Price": 3900,
+        "Rating": 4.9,
+        "Available Quantity": 3,
+        "category":"Horse"
+      },
+      {
+        "toys_id":5,
+        "Picture": "https://cdn.shopify.com/s/files/1/2281/5369/products/iguanodon-148229_512x512.jpg?v=1611015902",
+        "Name": "Stegosaurus Adventure",
+        "Price": 1900,
+        "Rating": 4.4,
+        "Available Quantity": 6,
+        "category":"dinosaur"
+      },
+      {
+        "toys_id":6,
+        "Picture": "https://m.media-amazon.com/images/I/51YGLJE1Y6L.jpg",
+        "Name": "Triceratops Explorer",
+        "Price": 2950,
+        "Rating": 4.8,
+        "Available Quantity": 4,
+        "category":"dinosaur"
+      }    
+]
 
     
     

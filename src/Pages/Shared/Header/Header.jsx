@@ -32,7 +32,7 @@ const Header = () => {
             <li><Link>Add a Toys</Link></li>
 
 
-            <li><Link>Blog</Link></li>
+            <li><Link to="/blog">Blog</Link></li>
 
           </ul>
         </div>
@@ -43,13 +43,13 @@ const Header = () => {
         <ul className="menu menu-horizontal px-1">
           <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link to="/">Home</Link></li>
 
-          <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link to='/allToys'>All toys </Link></li>
+          <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link to='/alltoys'>All toys </Link></li>
 
           <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link>My Toys </Link></li>
 
-          <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link>Add a Toys</Link></li>
+          <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link to="addtoy">Add a Toys</Link></li>
 
-          <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link>Blog</Link></li>
+          <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link to="/blog">Blog</Link></li>
         </ul>
       </div>
       {

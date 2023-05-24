@@ -1,15 +1,18 @@
 /* eslint-disable no-unused-vars */
+import { key } from 'localforage';
 import React, { useEffect, useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 
 const ShopCategory = () => {
-    const [toys,setToys] = useState([]);
-    useEffect(()=>{
-        fetch('toys.json')
-        .then(res => res.json())
-        .then(data => setToys(data));
-    },[])
+    const [toys, setToys] = useState([]);
+    const [activeTab, setTab] = useState("Teddy_Bear");
+    useEffect(() => {
+        fetch(`http://localhost:5000/toys/${activeTab}`)
+            .then(res => res.json())
+            .then(data => setToys(data));
+    }, [activeTab])
+    console.log(toys);
     return (
         <div>
             <div className='h-24 mt-32'>
@@ -18,92 +21,73 @@ const ShopCategory = () => {
 
             <Tabs className="text-center mb-12">
                 <TabList >
-                    <Tab>Teddy Bear</Tab>
-                    <Tab>Horse</Tab>
-                    <Tab>dinasaur</Tab>
+                    <Tab onClick={() => setTab('Teddy Bear')}
+                    >Teddy Bear</Tab>
+                    <Tab onClick={() => setTab('Horse')}>Horse</Tab>
+                    <Tab onClick={() => setTab('dinosaur')}>dinosaur</Tab>
                 </TabList>
-
                 <TabPanel>
-                    <div>
-                        <div className="card w-96 bg-base-100 shadow-xl">
-                            <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-                            <div className="card-body">
-                                <h2 className="card-title">{toys.length}</h2>
-                                <p>If a dog chews shoes whose shoes does he choose?</p>
-                                <div className="card-actions justify-end">
-                                    <button className="btn btn-primary">Details</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div className="card w-96 bg-base-100 shadow-xl">
-                            <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-                            <div className="card-body">
-                                <h2 className="card-title">Shoes!</h2>
-                                <p>If a dog chews shoes whose shoes does he choose?</p>
-                                <div className="card-actions justify-end">
-                                    <button className="btn btn-primary">Details</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {
 
+                        toys.map(toy => <div key={toy._id}>
+                            <div className="card w-96 bg-base-100 shadow-xl">
+                                <figure><img src={toy.Picture} alt="Shoes" /></figure>
+                                <div className="card-body">
+                                    <h2 className="card-title">Name:{toy.Name}</h2>
+                                    <p className='card-title'>Price: ${toy.Price}</p>
+                                    <p className='card-title'>Rating: {toy.Rating}</p>
+                                    <div className="card-actions justify-end">
+                                        <button className="btn btn-primary">Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        )
+                    }
                 </TabPanel>
                 <TabPanel>
-                <div>
-                        <div className="card w-96 bg-base-100 shadow-xl">
-                            <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-                            <div className="card-body">
-                                <h2 className="card-title">Shoes!</h2>
-                                <p>If a dog chews shoes whose shoes does he choose?</p>
-                                <div className="card-actions justify-end">
-                                    <button className="btn btn-primary">Details</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div className="card w-96 bg-base-100 shadow-xl">
-                            <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-                            <div className="card-body">
-                                <h2 className="card-title">Shoes!</h2>
-                                <p>If a dog chews shoes whose shoes does he choose?</p>
-                                <div className="card-actions justify-end">
-                                    <button className="btn btn-primary">Details</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {
 
+                        toys.map(toy => <div key={toy._id}>
+                            <div className="card w-96 bg-base-100 shadow-xl">
+                                <figure><img src={toy.Picture} alt="Shoes" /></figure>
+                                <div className="card-body">
+                                    <h2 className="card-title">Name:{toy.Name}</h2>
+                                    <p className='card-title'>Price: ${toy.Price}</p>
+                                    <p className='card-title'>Rating: {toy.Rating}</p>
+                                    <div className="card-actions justify-end">
+                                        <button className="btn btn-primary">Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        )
+                    }
                 </TabPanel>
                 <TabPanel>
-                <div>
-                        <div className="card w-96 bg-base-100 shadow-xl">
-                            <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-                            <div className="card-body">
-                                <h2 className="card-title">Shoes!</h2>
-                                <p>If a dog chews shoes whose shoes does he choose?</p>
-                                <div className="card-actions justify-end">
-                                    <button className="btn btn-primary">Details</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div className="card w-96 bg-base-100 shadow-xl">
-                            <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-                            <div className="card-body">
-                                <h2 className="card-title">Shoes!</h2>
-                                <p>If a dog chews shoes whose shoes does he choose?</p>
-                                <div className="card-actions justify-end">
-                                    <button className="btn btn-primary">Details</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {
 
+                        toys.map(toy => <div key={toy._id}>
+                            <div className="card w-96 bg-base-100 shadow-xl">
+                                <figure><img src={toy.Picture} alt="Shoes" /></figure>
+                                <div className="card-body">
+                                    <h2 className="card-title">Name:{toy.Name}</h2>
+                                    <p className='card-title'>Price: ${toy.Price}</p>
+                                    <p className='card-title'>Rating: {toy.Rating}</p>
+                                    <div className="card-actions justify-end">
+                                        <button className="btn btn-primary">Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        )
+                    }
                 </TabPanel>
+
+
             </Tabs>
 
         </div>
