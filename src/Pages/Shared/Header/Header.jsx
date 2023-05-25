@@ -19,20 +19,15 @@ const Header = () => {
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
           </label>
           <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+            <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link to="/">Home</Link></li>
 
-            <li><Link to="/">Home</Link></li>
+            <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link to='/alltoys'>All toys </Link></li>
+            {
+              user && <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link to="/mytoys">My Toys </Link></li>
+            }
+            <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link to="/addtoy">Add a Toys</Link></li>
 
-
-            <li><Link to='/allToys'>All toys </Link></li>
-
-
-            <li><Link>My Toys </Link></li>
-
-
-            <li><Link >Add a Toys</Link></li>
-
-
-            <li><Link to="/blog">Blog</Link></li>
+            <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link to="/blog">Blog</Link></li>
 
           </ul>
         </div>
@@ -44,10 +39,10 @@ const Header = () => {
           <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link to="/">Home</Link></li>
 
           <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link to='/alltoys'>All toys </Link></li>
-
-          <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link to="/mytoys">My Toys </Link></li>
-
-          <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link to="addtoy">Add a Toys</Link></li>
+          {
+            user && <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link to="/mytoys">My Toys </Link></li>
+          }
+          <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link to="/addtoy">Add a Toys</Link></li>
 
           <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link to="/blog">Blog</Link></li>
         </ul>
@@ -57,12 +52,12 @@ const Header = () => {
       }
       {
         user ? <div className="navbar-end" onClick={handleLogout} >
-            <Link to="/" className="btn">LogOut</Link>  
-          </div>: <div className="navbar-end" >
+          <Link to="/" className="btn">LogOut</Link>
+        </div> : <div className="navbar-end" >
           <Link to='/login' className="btn">LogIn</Link>
         </div>
 
-         }
+      }
     </div>
   );
 };
