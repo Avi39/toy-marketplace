@@ -1,10 +1,30 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useContext } from 'react';
 import {Link} from "react-router-dom";
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+
+import { AuthContext } from '../../Providers/AuthProviders';
+
 
 const AlltoysRow = ({toy}) => {
-    const {_id,Name,category,Price,Quantity,Picture} = toy
+    const{user} = useContext(AuthContext)
+    const {_id,Name,category,Price,Quantity,Picture} = toy;
+
+    const alert = () =>{
+        if(user === null)
+        {
+            Swal.fire({
+                title: 'Error!',
+                text: 'Do you want to continue',
+                icon: 'error',
+                confirmButtonText: 'Cool'
+              })
+        }
+        else{
+            return toy;
+        }
+    }
     return (
         <tr>
         <th>

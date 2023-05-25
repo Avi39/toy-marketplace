@@ -29,7 +29,7 @@ const Header = () => {
             <li><Link>My Toys </Link></li>
 
 
-            <li><Link>Add a Toys</Link></li>
+            <li><Link >Add a Toys</Link></li>
 
 
             <li><Link to="/blog">Blog</Link></li>
@@ -45,7 +45,7 @@ const Header = () => {
 
           <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link to='/alltoys'>All toys </Link></li>
 
-          <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link>My Toys </Link></li>
+          <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link to="/mytoys">My Toys </Link></li>
 
           <li className='text-purple-800 font-semibold text-xl hover:text-orange-500'><Link to="addtoy">Add a Toys</Link></li>
 

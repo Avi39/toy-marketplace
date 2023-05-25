@@ -1,37 +1,133 @@
-/* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from 'react';
+/* eslint-disable no-undef */
+// eslint-disable-next-line no-unused-vars
+import React, { useContext } from 'react';
+import { AuthContext } from '../../Providers/AuthProviders';
+// import Swal from 'sweetalert2/dist/sweetalert2.js';
+// import { data } from 'autoprefixer';
 
 const AddToy = () => {
-    const [allToys, setAllToys] = useState([]);
-    useEffect(() => {
-        fetch('http://localhost:5000/toys')
-            .then(res => res.json())
-            .then(data => setAllToys(data));
-    }, [])
+    const { user } = useContext(AuthContext)
+    const handleToy = (event) =>{
+        event.preventDefault();
+        const form = event.target;
+        const Name = form.Name.value;
+        const Picture = form.Picture.value;
+        const Price = form.Price.value;
+        const category = form.category.value;
+        const Rating = form.Rating.value;
+        const Quantity = form.Quantity.value;
+        const details = form.details.value;
+        const userName = user?.displayName;
+        const email = user?.email;
+    
+    const add ={
+        Name,
+        Picture,
+        Price,
+        category,
+        Rating ,
+        Quantity,
+        details,
+        userName,
+        email
+    }
+    console.log(add);
+
+    fetch('http://localhost:5000/addToy',{
+        method:'POST',
+        headers:{
+            'content-type':'application/json'
+        },
+        body: JSON.stringify(add)
+    })
+    .then(res=>res.json())
+    .then(data=>{
+        console.log(data);
+        if(data.insertedId){
+            alert('add toy done');
+        }
+
+    })
+}
     return (
-        <div className='grid grid-cols-3 mt-20'>
-            {
-                allToys.map(alltoy =>
-                    <div key={alltoy.id}>
-                        <div className="card card-compact w-96 bg-base-100 shadow-xl">
-                            <figure><img src={alltoy.Picture} /></figure>
-                            <div className="card-body">
-                                <h2 className="card-title">Name: {alltoy.Name}</h2>
-                                <h2 className="card-title">Category: {alltoy.category}</h2>
-                                <h2 className="card-title">Price: {alltoy.Price}</h2>
-                                <h2 className="card-title">Rating: {alltoy.Rating}</h2>
-                                <h2 className="card-title">Quantity: {alltoy.Quantity}</h2>
-                                <div className="card-actions justify-end">
-                                    <button className="btn btn-primary">Buy Now</button>
-                                </div>
-                            </div>
-                        </div>
-                        <br />
-                    </div>
+               
+                <form onSubmit={handleToy}>
                     
-                )
-            }
-        </div>
+                    <div className="card-body">
+                    <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Email</span>
+                            </label>
+                            <input type="text" placeholder="email" name='email' defaultValue={user?.email} className="input input-bordered" />
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Picture URL</span>
+                            </label>
+                            <input type="text" name='Picture' placeholder="Picture URL" className="input input-bordered" />
+                    
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Sub-Category</span>
+                            </label>
+                            <input type="text" name='category' placeholder="sub-Category" className="input input-bordered" />
+                    
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Toy Name</span>
+                            </label>
+                            <input type="text" name='Name' placeholder="Toy Name" className="input input-bordered" />
+                    
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">User Name</span>
+                            </label>
+                            <input type="text" name='displayName' defaultValue={user?.displayName} placeholder="User Name" className="input input-bordered" />
+                    
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Price</span>
+                            </label>
+                            <input type="text" name='Price' placeholder="Price" className="input input-bordered" />
+                    
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Rating</span>
+                            </label>
+                            <input type="text" name='Rating' placeholder="rating" className="input input-bordered" />
+                    
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Quantity</span>
+                            </label>
+                            <input type="text" name='Quantity' placeholder="Quantity" className="input input-bordered" />
+                    
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Description</span>
+                            </label>
+                            <input type="text" name='details' placeholder="description" className="input input-bordered" />
+                    
+                        </div>
+                        </div>
+                        <div className="form-control mt-6">
+                            <input className="btn btn-primary btn-block" type="submit" value="Submit" />
+                        </div>
+                        </div>
+                        
+                    
+                </form>
+               
+                   
+               
     );
 };
 
