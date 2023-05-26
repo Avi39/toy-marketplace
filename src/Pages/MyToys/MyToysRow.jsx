@@ -2,8 +2,9 @@
 /* eslint-disable no-unused-vars */
 import { data } from 'autoprefixer';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const MyToysRow = ({ myToy,handleDelete }) => {
+const MyToysRow = ({ myToy,handleDelete,handleUpdate }) => {
     const {_id, Name, Picture, Price, category, Rating, Quantity, details, userName, email } = myToy;
    
     return (
@@ -37,7 +38,10 @@ const MyToysRow = ({ myToy,handleDelete }) => {
             <td>{details}</td>
             <th>
                 <div className="btn-group btn-group-vertical">
-                    <button className="btn btn-active  rounded">Update</button>
+                    <Link to="/my_toys_update">
+                    <button onClick={()=> handleUpdate (_id)} className="btn btn-active btn-primary">Update</button>
+                    </Link>
+                   
                     <button onClick={()=> handleDelete(_id)} className="btn">Delete</button>
                 </div>
             </th>

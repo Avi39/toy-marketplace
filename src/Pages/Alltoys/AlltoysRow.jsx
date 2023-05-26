@@ -25,8 +25,14 @@ const AlltoysRow = ({toy}) => {
             return toy;
         }
     }
+   
+
+
+   
     return (
-        <tr>
+      
+        
+          <tr>
         <th>
           <label>
             <input type="checkbox" className="checkbox" />
@@ -58,6 +64,7 @@ const AlltoysRow = ({toy}) => {
          
         </th>
       </tr>
+        
     );
 };
 
