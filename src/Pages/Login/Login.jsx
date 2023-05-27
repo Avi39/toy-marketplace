@@ -74,11 +74,14 @@ const Login = () => {
                             </div>
                         </form>
                         <br />
-                        <button className='border' onClick={handleGoogleSignIn}><FaGoogle className=''></FaGoogle> Login with google</button>
-                        <p>New to AnimalToys StoCK? <Link className='font-bold underline text-red-500 ml-1'to="/signup">SignUp Please</Link></p>
+                        <button className='btn flex items-center justify-center gap-2 rounded ' onClick={handleGoogleSignIn}> 
+                        <FaGoogle className=''></FaGoogle>
+                       <span>Login with google</span> </button>
+                        <p className='mt-4'>New to AnimalToys StoCK? <Link className='font-bold underline text-red-500 ml-1'to="/signup">SignUp Please</Link></p> 
                     </div>
                 </div>
             </div>
+           
         </div>
     );
 };

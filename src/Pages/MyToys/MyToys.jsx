@@ -4,6 +4,7 @@ import { AuthContext } from '../../Providers/AuthProviders';
 import MyToysRow from './MyToysRow';
 import MyToysUpdate from './MyToysUpdate';
 import useTitle from '../../hooks/useTitle';
+import Swal from 'sweetalert2'
 
 const MyToys = () => {
     useTitle('My Toys');
@@ -28,7 +29,12 @@ const MyToys = () => {
                 console.log(data);
                 if(data.deletedCount > 0)
                 {
-                    alert('Deleted Successful');   
+                    Swal.fire({
+                        title: 'Done!',
+                        text: 'Deleted successfully',
+                        icon: 'success',
+                        confirmButtonText: 'ok'
+                      })  
                     const remaining = myToys.filter(myToy => myToy._id !== id);
                     setMyToys(remaining);
                     

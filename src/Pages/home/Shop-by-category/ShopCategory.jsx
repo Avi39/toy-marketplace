@@ -4,8 +4,11 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import { Rating } from '@smastrom/react-rating'
+import '@smastrom/react-rating/style.css'
 
 const ShopCategory = () => {
+    const [rating, setRating] = useState(0);
     const [toys, setToys] = useState([]);
     const [activeTab, setTab] = useState("Teddy_Bear");
     useEffect(() => {
@@ -37,6 +40,7 @@ const ShopCategory = () => {
                                     <h2 className="card-title">Name:{toy.Name}</h2>
                                     <p className='card-title'>Price: ${toy.Price}</p>
                                     <p className='card-title'>Rating: {toy.Rating}</p>
+                                    <Rating style={{ maxWidth: 200 }} value={toy.Rating} readOnly/>
                                     <div className="card-actions justify-end">
                                         <Link to={`detailsCategory/${toy._id}`}>
                                         <button className="btn btn-primary">Details</button>

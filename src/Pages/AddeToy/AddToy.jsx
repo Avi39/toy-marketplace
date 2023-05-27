@@ -3,6 +3,7 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProviders';
 import useTitle from '../../hooks/useTitle';
+import Swal from 'sweetalert2'
 // import Swal from 'sweetalert2/dist/sweetalert2.js';
 // import { data } from 'autoprefixer';
 
@@ -46,7 +47,12 @@ const AddToy = () => {
     .then(data=>{
         console.log(data);
         if(data.insertedId){
-            alert('add toy done');
+            Swal.fire({
+                title: 'Done!',
+                text: 'Add a toy successfully',
+                icon: 'success',
+                confirmButtonText: 'ok'
+              })
         }
 
     })
