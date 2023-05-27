@@ -23,7 +23,7 @@ const Banner = () => {
             </div>
             </div>
             <br /><br />
-            <p className='text-4xl mt-8 font-semibold text-center text-violet-800  '>PHotos SCroll GAllery</p>
+            <p className='text-4xl mt-2 font-semibold text-center text-violet-800  '>PHotos SCroll GAllery</p>
             <div className="carousel carousel-center rounded-box mt-12 ">
                 <div className="carousel-item w-1/5">
                     <img src={banner1}alt="Pizza" />
