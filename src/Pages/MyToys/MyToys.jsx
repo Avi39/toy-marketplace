@@ -2,7 +2,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Providers/AuthProviders';
 import MyToysRow from './MyToysRow';
-// import MyToysUpdate from './MyToysUpdate';
+import MyToysUpdate from './MyToysUpdate';
 
 const MyToys = () => {
     const {user} =useContext(AuthContext);
@@ -104,10 +104,10 @@ const MyToys = () => {
         </MyToysRow>)
       }
       {/* {
-        myToys.map(myToy=>
+        myToys.map(myTo=>
         <MyToysUpdate
-        key={myToy._id}
-        myToy={myToy}
+        key={myTo._id}
+        myToy={myTo}
         >
 
         </MyToysUpdate>)

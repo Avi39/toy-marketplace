@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { key } from 'localforage';
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 
@@ -37,7 +38,9 @@ const ShopCategory = () => {
                                     <p className='card-title'>Price: ${toy.Price}</p>
                                     <p className='card-title'>Rating: {toy.Rating}</p>
                                     <div className="card-actions justify-end">
+                                        <Link to={`detailsCategory/${toy._id}`}>
                                         <button className="btn btn-primary">Details</button>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -57,7 +60,9 @@ const ShopCategory = () => {
                                     <p className='card-title'>Price: ${toy.Price}</p>
                                     <p className='card-title'>Rating: {toy.Rating}</p>
                                     <div className="card-actions justify-end">
+                                    <Link to={`detailsCategory/${toy._id}`}>
                                         <button className="btn btn-primary">Details</button>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -77,7 +82,9 @@ const ShopCategory = () => {
                                     <p className='card-title'>Price: ${toy.Price}</p>
                                     <p className='card-title'>Rating: {toy.Rating}</p>
                                     <div className="card-actions justify-end">
+                                    <Link to={`detailsCategory/${toy._id}`}>
                                         <button className="btn btn-primary">Details</button>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>

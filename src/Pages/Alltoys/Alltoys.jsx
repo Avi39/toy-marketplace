@@ -9,7 +9,7 @@ const Alltoys = () => {
   const [allToys,setAllToys] = useState([]);
   const [searchText, setSearchText] = useState("");
     useEffect(()=>{
-        fetch('http://localhost:5000/toys')
+        fetch('http://localhost:5000/allToys')
         .then(res => res.json())
         .then(data => setAllToys(data));
     },[])
