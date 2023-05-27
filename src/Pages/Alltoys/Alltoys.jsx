@@ -3,8 +3,10 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Providers/AuthProviders';
 import AlltoysRow from './AlltoysRow';
 import { data } from 'autoprefixer';
+import useTitle from '../../hooks/useTitle';
 
 const Alltoys = () => {
+  useTitle('AllToys');
   const{user} = useContext(AuthContext)
   const [allToys,setAllToys] = useState([]);
   const [searchText, setSearchText] = useState("");

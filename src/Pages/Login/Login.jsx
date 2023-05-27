@@ -6,6 +6,7 @@ import { AuthContext } from '../../Providers/AuthProviders';
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import app from '../../firebse/firebase.config';
 import { FaBeer,FaGoogle } from 'react-icons/fa';
+import useTitle from '../../hooks/useTitle';
 
 const Login = () => {
     const auth = getAuth(app)
@@ -13,6 +14,7 @@ const Login = () => {
     const {signIn} = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
+    useTitle('Login')
     const from = location.state?.from?.pathname || '/';
     console.log('login page location',location);
     const handleLogin = event =>{

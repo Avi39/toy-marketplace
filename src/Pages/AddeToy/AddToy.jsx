@@ -2,10 +2,12 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProviders';
+import useTitle from '../../hooks/useTitle';
 // import Swal from 'sweetalert2/dist/sweetalert2.js';
 // import { data } from 'autoprefixer';
 
 const AddToy = () => {
+    useTitle('Add a Toy');
     const { user } = useContext(AuthContext)
     const handleToy = (event) =>{
         event.preventDefault();

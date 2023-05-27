@@ -1,8 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
 import React from 'react';
+import useTitle from '../../hooks/useTitle';
 
 const Blog = () => {
+    useTitle('Blog');
     return (
         <div className='mt-20 mb-20'>
             <h2 className='text-3xl'>1. What is an access token and refresh token? How do they work and where should we store them on the client-side?</h2>
