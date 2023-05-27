@@ -13,10 +13,11 @@ const SignUp = () => {
     const handleSignUp = event =>{
         event.preventDefault();
         const form = event.target;
+        const photo = form.photo.value;
         const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(name,email,password);
+        console.log(name,email,password,photo);
 
         createUser(email,password)
         .then(result=>{
@@ -37,6 +38,12 @@ const SignUp = () => {
                     <div className="card-body">
                         <h1 className="text-3xl font-bold text-center">SignUp Please</h1>
                         <form onSubmit={handleSignUp}>
+                        <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Photo URL</span>
+                                </label>
+                                <input type="text" name='photo' placeholder="Your Photo URL" className="input input-bordered" />
+                            </div>
                         <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Name</span>
