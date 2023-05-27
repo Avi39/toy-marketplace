@@ -34,7 +34,7 @@ const ShopCategory = () => {
                     {
 
                         toys.map(toy => <div key={toy._id}>
-                            <div className="card w-96 bg-base-100 shadow-xl">
+                            <div className="card w-96 bg-base-100 shadow-xl grid sm:grid-cols-1 sm:ml-40 md:grid-cols-2">
                                 <figure><img src={toy.Picture} alt="Shoes" /></figure>
                                 <div className="card-body">
                                     <h2 className="card-title">Name:{toy.Name}</h2>
@@ -57,12 +57,15 @@ const ShopCategory = () => {
                     {
 
                         toys.map(toy => <div key={toy._id}>
-                            <div className="card w-96 bg-base-100 shadow-xl">
+                            <div className="card w-96 bg-base-100 shadow-xl grid sm:grid-cols-1 sm:ml-40 md:grid-cols-2 ">
+                                <div>
                                 <figure><img src={toy.Picture} alt="Shoes" /></figure>
+                                </div>  
                                 <div className="card-body">
                                     <h2 className="card-title">Name:{toy.Name}</h2>
                                     <p className='card-title'>Price: ${toy.Price}</p>
                                     <p className='card-title'>Rating: {toy.Rating}</p>
+                                    <Rating style={{ maxWidth: 200 }} value={toy.Rating} readOnly/>
                                     <div className="card-actions justify-end">
                                     <Link to={`detailsCategory/${toy._id}`}>
                                         <button className="btn btn-primary">Details</button>
@@ -75,16 +78,17 @@ const ShopCategory = () => {
                         )
                     }
                 </TabPanel>
-                <TabPanel>
+                <TabPanel >
                     {
 
                         toys.map(toy => <div key={toy._id}>
-                            <div className="card w-96 bg-base-100 shadow-xl">
+                            <div className="card w-96 g-base-100 shadow-xl grid sm:grid-cols-1 sm:ml-40 md:grid-cols-2 ">
                                 <figure><img src={toy.Picture} alt="Shoes" /></figure>
                                 <div className="card-body">
                                     <h2 className="card-title">Name:{toy.Name}</h2>
                                     <p className='card-title'>Price: ${toy.Price}</p>
                                     <p className='card-title'>Rating: {toy.Rating}</p>
+                                    <Rating style={{ maxWidth: 200 }} value={toy.Rating} readOnly/>
                                     <div className="card-actions justify-end">
                                     <Link to={`detailsCategory/${toy._id}`}>
                                         <button className="btn btn-primary">Details</button>
