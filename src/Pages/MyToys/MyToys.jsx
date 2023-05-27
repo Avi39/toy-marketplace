@@ -2,6 +2,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Providers/AuthProviders';
 import MyToysRow from './MyToysRow';
+// import MyToysUpdate from './MyToysUpdate';
 
 const MyToys = () => {
     const {user} =useContext(AuthContext);
@@ -102,7 +103,16 @@ const MyToys = () => {
         >
         </MyToysRow>)
       }
-      <button>aaaa</button>
+      {/* {
+        myToys.map(myToy=>
+        <MyToysUpdate
+        key={myToy._id}
+        myToy={myToy}
+        >
+
+        </MyToysUpdate>)
+
+      } */}
     </tbody>
     
     

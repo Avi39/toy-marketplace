@@ -2,6 +2,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Providers/AuthProviders';
 import AlltoysRow from './AlltoysRow';
+import { data } from 'autoprefixer';
 
 const Alltoys = () => {
   const{user} = useContext(AuthContext)
@@ -12,12 +13,24 @@ const Alltoys = () => {
         .then(res => res.json())
         .then(data => setAllToys(data));
     },[])
+
+    // useEffect(()=>{
+      
+    // },[])
+
+    const handleSearch = () =>{
+      fetch(`http://localhost:5000/toysSearch/${searchText}`)
+      .then(res => res.json())
+      .then(data =>{
+        setAllToys(data);
+      })
+    }
   return (
     <div>
       <div className="overflow-x-auto w-full mt-2 mb-14">
       <div className='text-center'>
     <input onChange={(e)=> setSearchText(e.target.value)} type="text" placeholder="Type here" className="input input-bordered input-success w-full max-w-xs  mb-8 mt-4" />{" "}
-    <button className="btn btn-secondary ml-4">Search</button>
+    <button onClick={handleSearch} className="btn btn-secondary ml-4">Search</button>
 
     </div>
   <table className="table w-full">

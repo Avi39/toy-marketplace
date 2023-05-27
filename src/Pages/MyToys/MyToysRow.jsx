@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 
 const MyToysRow = ({ myToy,handleDelete,handleUpdate }) => {
     const {_id, Name, Picture, Price, category, Rating, Quantity, details, userName, email } = myToy;
+    
    
     return (
         <tr>
