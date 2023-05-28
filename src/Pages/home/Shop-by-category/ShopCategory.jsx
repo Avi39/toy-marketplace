@@ -12,7 +12,7 @@ const ShopCategory = () => {
     const [toys, setToys] = useState([]);
     const [activeTab, setTab] = useState("Teddy_Bear");
     useEffect(() => {
-        fetch(`http://localhost:5000/toys/${activeTab}`)
+        fetch(`https://assignment-eleven-server-lyart.vercel.app/toys/${activeTab}`)
             .then(res => res.json())
             .then(data => setToys(data));
     }, [activeTab])

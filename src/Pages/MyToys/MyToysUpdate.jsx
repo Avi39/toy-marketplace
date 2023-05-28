@@ -29,7 +29,7 @@ const MyToysUpdate = () => {
     }
     console.log(add);
 
-    fetch(`http://localhost:5000/updated/${_id}`,{
+    fetch(`https://assignment-eleven-server-lyart.vercel.app/updated/${_id}`,{
         method:'PATCH',
         headers:{
             'Content-Type':'application/json'

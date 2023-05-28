@@ -19,7 +19,7 @@ const Blog = () => {
             <br />
             <h2 className='text-3xl'>2. Compare SQL and NoSQL databases?</h2>
             <br />
-            <p>Ans: SQL databases are based on a structured data model with predefined schemas, enforce data consistency, and are good for applications with complex relationships and transactions. NoSQL databases offer flexible schemas, scale horizontally, handle unstructured data, and are suitable for applications requiring high scalability, real-time processing, and dynamic data. The choice depends on your application's specific needs. </p>
+            <p>Ans: SQL databases are based on a structured data model with predefined schemas, enforce data consistency, and are good for applications with complex relationships and transactions. NoSQL databases offer flexible schemas, scale horizontally, handle unstructured data, and are suitable for applications requiring high scalability, real-time processing, and dynamic data. The choice depends on our application's specific needs. </p>
             <br />
             <h2 className='text-3xl'>3. What is express js? What is Nest JS ?</h2>
             <br />
@@ -28,7 +28,7 @@ const Blog = () => {
                 <br />
                 <h2 className='text-3xl'>3. What is MongoDB aggregate and how does it work ?</h2>
                 <br />
-                <p>Ans: </p>
+                <p>Ans: aggregate is a feature in MongoDB that allows us to perform complex data analysis tasks on our data. It works by using a series of stages to filter, group, sort, transform, and join our data. Each stage in the pipeline performs a specific operation on the data, and the output of one stage becomes the input for the next stage. By combining these stages, we can create powerful data transformation pipelines. The result is a cursor that can be iterated to retrieve the processed data.</p>
         </div>
     );
 };

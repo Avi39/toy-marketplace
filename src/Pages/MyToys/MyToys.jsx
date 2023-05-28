@@ -11,7 +11,7 @@ const MyToys = () => {
     const {user} =useContext(AuthContext);
    
     const [myToys,setMyToys] = useState([]); 
-    const url = `http://localhost:5000/addToy?email=${user?.email}`;
+    const url = `https://assignment-eleven-server-lyart.vercel.app/addToy?email=${user?.email}`;
     useEffect (()=>{
         fetch(url)
         .then(res => res.json())
@@ -21,7 +21,7 @@ const MyToys = () => {
     const handleDelete = id =>{ 
         const proceed = confirm('Are You sure You Want to Delete');
         if(proceed){
-            fetch(`http://localhost:5000/addToy/${id}`,{
+            fetch(`https://assignment-eleven-server-lyart.vercel.app/addToy/${id}`,{
                 method:'DELETE',
             })
             .then(res => res.json())
@@ -45,7 +45,7 @@ const MyToys = () => {
     }
 
     // const handleUpdate = id =>{
-    //     fetch(`http://localhost:5000/updated/${id}`,{
+    //     fetch(`https://assignment-eleven-server-lyart.vercel.app/updated/${id}`,{
     //         method:'PATCH',
     //         headers:{
     //             'content-type':'application/json'
