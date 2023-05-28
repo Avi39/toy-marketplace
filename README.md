@@ -4,4 +4,4 @@
 * the website get an authentication system
 * the website have a blog section
 * the website have a private route where user have to go by access login otherwise user can't go this page 
-* 
+* client-side: https://assignment-eleven-cf75d.web.app/
