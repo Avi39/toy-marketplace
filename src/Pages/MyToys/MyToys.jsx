@@ -44,24 +44,24 @@ const MyToys = () => {
         }
     }
 
-    const handleUpdate = id =>{
-        fetch(`http://localhost:5000/updated/${id}`,{
-            method:'PATCH',
-            headers:{
-                'content-type':'application/json'
-            },
-            body:JSON.stringify
-        })
-        .then(res => res.json())
-        .then(data =>{
-            console.log(data);
-            if(data.modifiedCount > 0) {
-                // update
+    // const handleUpdate = id =>{
+    //     fetch(`http://localhost:5000/updated/${id}`,{
+    //         method:'PATCH',
+    //         headers:{
+    //             'content-type':'application/json'
+    //         },
+    //         body:JSON.stringify(id),
+    //     })
+    //     .then(res => res.json())
+    //     .then(data =>{
+    //         console.log(data);
+    //         if(data.modifiedCount > 0) {
+    //             // update
 
-            }    
-        } 
-        )
-    }
+    //         }    
+    //     } 
+    //     )
+    // }
    
     return (
         <div className="overflow-x-auto w-full">
@@ -107,9 +107,10 @@ const MyToys = () => {
         key={myToy._id}
         myToy={myToy}
         handleDelete={handleDelete}
-        handleUpdate ={ handleUpdate }
+        // handleUpdate ={ handleUpdate }
         >
         </MyToysRow>)
+
       }
       {/* {
         myToys.map(myTo=>

@@ -39,8 +39,8 @@ const MyToysRow = ({ myToy,handleDelete,handleUpdate }) => {
             <td>{details}</td>
             <th>
                 <div className="btn-group btn-group-vertical">
-                    <Link to="/my_toys_update">
-                    <button onClick={()=> handleUpdate (_id)} className="btn btn-active btn-primary">Update</button>
+                    <Link to={`/my_toys_update/${_id}`}>
+                    <button className="btn btn-active btn-primary">Update</button>
                     </Link>
                    
                     <button onClick={()=> handleDelete(_id)} className="btn">Delete</button>

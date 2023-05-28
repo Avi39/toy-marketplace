@@ -53,8 +53,9 @@ const router = createBrowserRouter([
           element:<PrivateRoute><MyToys></MyToys></PrivateRoute>
         },
         {
-          path:'my_toys_update',
-          element:<MyToysUpdate></MyToysUpdate>
+          path:'my_toys_update/:id',
+          element:<MyToysUpdate></MyToysUpdate>,
+          loader:({params})=>fetch(`http://localhost:5000/toyss/${params.id}`)
         },
         {
           path:'detailsCategory/:id',
