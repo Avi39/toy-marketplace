@@ -11,7 +11,7 @@ const MyToys = () => {
     const {user} =useContext(AuthContext);
    
     const [myToys,setMyToys] = useState([]); 
-    const url = `https://assignment-eleven-server-lyart.vercel.app/addToy?email=${user?.email}`;
+    const url = `http://localhost:5000/addToy?email=${user?.email}`;
     useEffect (()=>{
         fetch(url)
         .then(res => res.json())
