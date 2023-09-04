@@ -21,7 +21,7 @@ const Contactus = () => {
     };
     return (
         <div >
-            <h2 className='text-5xl text-center font-semibold text-green-600 mb-4 mt-20'>Contact With Us</h2>
+            <h2 className='text-5xl text-center font-bold text-green-600 mb-4 mt-20'>Contact With Us</h2>
             <form ref={form} onSubmit={sendEmail}>
                 <div className="form-control w-full max-w-xs mx-auto mb-8">
                     <label className="label">

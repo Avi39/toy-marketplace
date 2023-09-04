@@ -10,7 +10,7 @@ const Kids = () => {
     }, [])
     return (
         <div className='mt-20 mb-12 '>
-            <h2 className='text-5xl text-center font-semibold text-blue-600 mb-12'>Kids Enjoy With Our Product</h2>
+            <h2 className='text-5xl text-center font-bold text-blue-600 mb-12'>Kids Enjoy With Our Product</h2>
             <div className='grid md:grid-cols-3 sm:grid-cols-1 sm:ml-40 md:ml-20'>
                 {
                     kids.map(kid =>

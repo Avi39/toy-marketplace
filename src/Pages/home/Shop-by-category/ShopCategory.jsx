@@ -20,7 +20,7 @@ const ShopCategory = () => {
     return (
         <div>
             <div className='h-24 mt-32'>
-                <h2 className='text-center text-5xl mb-8 font-semibold text-orange-600'>Shop By Category</h2>
+                <h2 className='text-center text-5xl mb-8 font-bold text-orange-600'>Shop By Category</h2>
             </div>
 
             <Tabs className="text-center mb-12">

@@ -6,6 +6,8 @@ import SpecialToys from '../specialToys/SpecialToys';
 import Kids from '../kids/Kids';
 import useTitle from '../../../hooks/useTitle';
 import Contactus from '../../Contact/Contactus';
+import AnimatedToys from '../../animatedToys/AnimatedToys';
+import ShopByAge from '../../ShopByAge/ShopByAge';
 
 const Home = () => {
     useTitle('Home');
@@ -15,7 +17,10 @@ const Home = () => {
            <ShopCategory></ShopCategory>
            <SpecialToys></SpecialToys>
            <Kids></Kids>
+           <AnimatedToys></AnimatedToys>
+           <ShopByAge></ShopByAge>
            <Contactus></Contactus>
+           
         </div>
     );
 };
