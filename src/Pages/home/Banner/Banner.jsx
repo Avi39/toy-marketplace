@@ -14,9 +14,9 @@ const Banner = () => {
     return (
 
         <div>
-            <div className='md:flex'>
+            <div className='md:flex ml-28'>
             <div>
-                <h1 className='text-7xl mt-12 sm:ml-6 '>There is a Animal <br /> Toys <span className='font-semibold text-orange-500'>Collection </span> <br /> You Can Get Any toys <span className='text-pink-500 font-semibold'>from</span> Here</h1>
+                <h1 className=' md:text-7xl mt-12 '>There is a Animal <br /> Toys <span className='font-semibold text-orange-500'>Collection </span> <br /> You Can Get Any toys <span className='text-pink-500 font-semibold'>from</span> Here</h1>
             </div>
             <div className='w-2/4'>
                 <Lottie animationData={animation} loop={true}></Lottie>

@@ -3,6 +3,7 @@ import React, { useContext } from 'react';
 import logo from '../../../assets/toys.png'
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Providers/AuthProviders';
+import { Container } from 'postcss';
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext)
@@ -11,8 +12,8 @@ const Header = () => {
       .then()
       .catch(error => console.log(error));
   }
-  return (
-    <div className="navbar bg-base-100 mt-4">
+  return (  
+      <div className="md:ml-28 navbar bg-base-100 mt-4 md:w-10/12">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -58,6 +59,8 @@ const Header = () => {
         </div>
       }
     </div>
+  
+    
   );
 };
 
