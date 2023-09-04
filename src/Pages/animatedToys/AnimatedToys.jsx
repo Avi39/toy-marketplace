@@ -8,7 +8,7 @@ const AnimatedToys = () => {
     return (
         <div>
             <h2 className='text-5xl text-center font-bold text-red-600 mb-12 mt-20'>Our Special Animation Product</h2>
-            <div className='grid grid-cols-3 ml-20'>
+            <div className='grid md:grid-cols-3 ml-20'>
             <div className="card w-96 bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
                     <Lottie className="rounded-xl"  animationData={animationToy1} loop={true} />
