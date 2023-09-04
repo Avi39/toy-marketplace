@@ -48,7 +48,7 @@ const Header = () => {
         </ul>
       </div>
       {
-        user && <img className='ml-12 w-12 rounded-full ' src={user.photoURL} alt="" />
+        user && <img className='ml-12  md:w-12 w-2 rounded-full ' src={user.photoURL} alt="" />
       }
       {
         user ? <div className="navbar-end" onClick={handleLogout} >

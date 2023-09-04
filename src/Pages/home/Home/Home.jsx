@@ -5,6 +5,7 @@ import ShopCategory from '../Shop-by-category/ShopCategory';
 import SpecialToys from '../specialToys/SpecialToys';
 import Kids from '../kids/Kids';
 import useTitle from '../../../hooks/useTitle';
+import Contactus from '../../Contact/Contactus';
 
 const Home = () => {
     useTitle('Home');
@@ -14,6 +15,7 @@ const Home = () => {
            <ShopCategory></ShopCategory>
            <SpecialToys></SpecialToys>
            <Kids></Kids>
+           <Contactus></Contactus>
         </div>
     );
 };
